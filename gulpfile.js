@@ -61,7 +61,7 @@ gulp.task('bowerJS', function () {
 });
 
 gulp.task('cssBuild', function() {
-  return gulp.src(['scss/*.scss'])
+  return gulp.src(['scss/app.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
@@ -99,3 +99,5 @@ gulp.task('bowerBuild', ['bowerJS'], function(){
 gulp.task('htmlBuild', function() {
   browserSync.reload();
 });
+
+gulp.task('bower', ['bowerJS', 'bowerCSS']);

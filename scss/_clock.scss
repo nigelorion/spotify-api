@@ -1,3 +1,42 @@
-body {
-  background-color: green;
+.clock-time, .clock-alarm {
+  font-size: 10em;
+  color: lightblue;
+  text-align: center;
+}
+
+.clock-alarm {
+  color: maroon;
+}
+
+.alarm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-top: 150px;
+}
+
+.button {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button__up, .button__down {
+  font-size: 5em;
+  color: gray;
+  &:hover {
+    color: black;
+    cursor: pointer;
+
+  }
+  &:active {
+    color: green;
+  }
+}
+
+.button__down {
+  transform: rotate(180deg);
+
 }
