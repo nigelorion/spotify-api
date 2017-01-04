@@ -1,7 +1,7 @@
 {
-  "name": "alarm-clock",
+  "name": "spotify-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "use spotify api to search track details",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
