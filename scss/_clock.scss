@@ -1,42 +1,91 @@
-.clock-time, .clock-alarm {
+.clock-time, .alarm__clock {
   font-size: 10em;
   color: lightblue;
   text-align: center;
 }
 
-.clock-alarm {
-  color: maroon;
-}
-
 .alarm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 150px;
-  margin-top: 150px;
-}
-
-.button {
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.button__up, .button__down {
-  font-size: 5em;
-  color: gray;
-  &:hover {
-    color: black;
-    cursor: pointer;
-
+  &__clock {
+    color: maroon;
+    margin: 0;
+    // padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__off {
+      border: solid green 2px;
+      font-size: 3em;
+      width: 100px;
+      text-align: center;
+      &:hover {
+        background-color: red;
+      }
+    }
   }
-  &:active {
-    color: green;
+  &__up {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    width: 50%;
+    margin: auto;
+    &__button {
+      font-size: 6em;
+      margin: 0 60px;
+      color: blue;
+      transition: 200ms all ease-in-out;
+      &:hover {
+        color: red;
+        font-size: 7em;
+      }
+    }
+  }
+  &__down {
+    @extend .alarm__up;
+    &__button {
+      @extend .alarm__up__button;
+      transform: rotate(180deg);
+      &:hover {
+        color: red;
+        font-size: 7em;
+      }
+    }
   }
 }
 
-.button__down {
-  transform: rotate(180deg);
-
+@keyframes rotate {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
 }
+
+
+
+// .alarm {
+//   margin: 10%;
+//   & .up {
+//     display: flex;
+//     justify-content: space-around;
+//     font-size: 6em;
+//     margin: 0 60px;
+//     height: 50px;
+//     transition: 200ms all ease-in-out;
+//     &:hover{
+//       color: red;
+//       font-size: 7em;
+//     }
+//   }
+//   & .down {
+//     @extend .up;
+//     transform: rotate(180deg);
+//   }
+// }
+
+
+//
+// .button__down {
+//   transform: rotate(180deg);
+// }

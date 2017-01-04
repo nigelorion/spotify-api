@@ -8,18 +8,22 @@
   </head>
   <body>
     <div class="alarm">
-      <div class="button">
-
-        <div class="button__up">^</div>
-        <div class="button__up">^</div>
+      <div class="alarm__up">
+        <p id="up__hours" class="alarm__up__button">^</p>
+        <p id="up__minutes" class="alarm__up__button">^</p>
+        <p id="up__seconds" class="alarm__up__button">^</p>
       </div>
-      <h1 class="clock-alarm" id="alarm">12:00</h1>
-      <div class="button">
-
-        <div class="button__down">^</div>
-        <div class="button__down">^</div>
+      <h1 class="alarm__clock" id="alarm"></h1>
+      <div class="alarm__down">
+        <p id="down__hours" class="alarm__down__button">^</p>
+        <p id="down__minutes" class="alarm__down__button">^</p>
+        <p id="down__seconds" class="alarm__down__button">^</p>
       </div>
+      <p class="alarm__clock__off">
+        OFF
+      </p>
     </div>
+
     <div class="clock">
       <h1 class="clock-time" id="time"></h1>
     </div>
