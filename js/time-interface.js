@@ -21,7 +21,6 @@ $('#alarm').text("12:00:00");
 
  $(".alarm__clock__off").click(function() {
    $("body").css("animation", "rotate .1s ease-in-out");
-   console.log("hit");
  });
 
  });
