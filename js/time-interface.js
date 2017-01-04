@@ -20,7 +20,7 @@ $('#alarm').text("12:00:00");
  });
 
  $(".alarm__clock__off").click(function() {
-   $("p").css("animation", "rotate .1s ease-in-out");
+   $("body").css("animation", "rotate .1s ease-in-out");
    console.log("hit");
  });
 

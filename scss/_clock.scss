@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 .clock-time, .alarm__clock {
   font-size: 10em;
   color: lightblue;
   text-align: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .alarm {
   display: flex;
   flex-direction: column;
+  margin: 5%;
   &__clock {
     color: maroon;
     margin: 0;
@@ -17,27 +20,34 @@
     &__off {
       border: solid green 2px;
       font-size: 3em;
-      width: 100px;
+      width: 90%;
       text-align: center;
+      margin: auto;
+      transition: 200ms all ease-in-out;
+      margin: 50px;
+      color: lightgreen;
       &:hover {
-        background-color: red;
+        background-color: gray;
+        cursor: pointer;
       }
     }
   }
   &__up {
     display: flex;
     justify-content: space-around;
-    border: 2px solid black;
-    width: 50%;
+    width: 80%;
     margin: auto;
     &__button {
       font-size: 6em;
       margin: 0 60px;
-      color: blue;
+      color: lightblue;
       transition: 200ms all ease-in-out;
+      cursor: pointer;
       &:hover {
         color: red;
-        font-size: 7em;
+        // font-size: 7em;
+        transform: scale(1.5);
+        // transform: rotate(180deg);
       }
     }
   }
@@ -48,44 +58,18 @@
       transform: rotate(180deg);
       &:hover {
         color: red;
-        font-size: 7em;
+        transform: rotate(180deg) scale(1.5);
+
+
       }
     }
   }
 }
 
 @keyframes rotate {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
+    0%   {background-color:rgba(212, 168, 117, 0.73);}
+    25%  {background-color:rgba(147, 203, 124, 0.74);}
+    50%  {background-color:rgba(44, 81, 97, 0.68);}
+    75%  {background-color:rgba(161, 92, 189, 0.71);}
+    100% {background-color:rgba(104, 212, 184, 0.75);}
 }
-
-
-
-// .alarm {
-//   margin: 10%;
-//   & .up {
-//     display: flex;
-//     justify-content: space-around;
-//     font-size: 6em;
-//     margin: 0 60px;
-//     height: 50px;
-//     transition: 200ms all ease-in-out;
-//     &:hover{
-//       color: red;
-//       font-size: 7em;
-//     }
-//   }
-//   & .down {
-//     @extend .up;
-//     transform: rotate(180deg);
-//   }
-// }
-
-
-//
-// .button__down {
-//   transform: rotate(180deg);
-// }

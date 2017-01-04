@@ -23,7 +23,7 @@ AlarmTime.prototype.checkAlarm = function (clocktime) {
 };
 
 AlarmTime.prototype.alarm = function () {
-  $("p").css("animation", "rotate .6s ease-in-out infinite");
+  $("body").css("animation", "rotate .6s ease-in-out infinite");
 };
 
 AlarmTime.prototype.alarmClicks = function (thisID) {
